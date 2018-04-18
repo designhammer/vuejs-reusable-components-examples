@@ -5,16 +5,18 @@
     </select>
 
     <div v-if="selectedRangeType == 'custom'">
-      <label>From: <date-picker
+      <label for='pickfrom'>From: </label>
+      <date-picker
+                     id='pickfrom'
                      v-model="fromPickedDate"
                      @input="dateRangeChanged('custom')"
                      ></date-picker>
-      </label>
-      <label>To: <date-picker
+      <label for='pickto'>To: </label>
+      <date-picker
+                   id='pickto'
                    v-model="toPickedDate"
                    @input="dateRangeChanged('custom')"
                    ></date-picker>
-      </label>
     </div>
   </div>
 </template>
