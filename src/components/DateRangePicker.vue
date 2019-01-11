@@ -77,7 +77,7 @@ export default {
         case 'yesterday':
           return {
             from: moment().subtract(1, 'day').startOf('day').toDate(),
-            to: moment().subtract(1, 'day').startOf('day').toDate()
+            to: moment().subtract(1, 'day').endOf('day').toDate()
           }
 
         case 'today':
